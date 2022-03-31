@@ -42,6 +42,16 @@ router.patch("/:id", async (req, res) => {
     } catch (err) {
         console.log('err', err);
     }
-})
+});
+
+router.get("/:restaurant_name", async (req, res) => {
+    try {
+        const restaurant = await Restaurant.find({ restaurant_name: req.params.restaurant_name }).lean().exec();
+        return res.send(restaurant);
+        // res.send(restaurant);
+    } catch (err) {
+        res.status(520).send(err.message);
+    }
+});
 
 module.exports = router;
