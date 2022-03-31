@@ -9,6 +9,17 @@ router.get("/users", async (req, res) => {
     } catch (error) {
         return res.status(500).send(error.message)
     }
-})
+});
+
+router.post("/user", async (req, res) => {
+    try {
+        const user = await User.create(req.body);
+        res.send(user);
+
+    }
+    catch (err) {
+        res.send(err.message);
+    }
+});
 
 module.exports = router;
