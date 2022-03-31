@@ -13,7 +13,7 @@ const port = process.env.PORT || 7000;
 
 // const categoryController = require("./controllers/categary.controller");
 
-// const dishController = require("./controllers/dish.controller");
+const dishController = require("./controllers/dish.controller");
 
 // const resController = require("./controllers/res.controller");
 
@@ -34,7 +34,7 @@ app.use(express.json());
 
 // app.use("/category", categoryController);
 
-// app.use("/dish", dishController);
+app.use("/dish", dishController);
 
 // app.use("/restaurant", resController);
 
