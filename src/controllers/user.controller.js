@@ -10,14 +10,6 @@ router.get("", async (req, res) => {
         return res.status(500).send(error.message)
     }
 });
-router.get("/:id", async (req, res) => {
-    try {
-        let user = await User.findById(req.params.id).lean().exec();
-        return res.status(200).send(user);
-    } catch (error) {
-        return res.status(500).send(error.message)
-    }
-});
 
 
 router.post("", async (req, res) => {
