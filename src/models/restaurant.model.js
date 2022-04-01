@@ -7,7 +7,8 @@ const restaurantSchemas = new mongoose.Schema({
     location: { type: String, required: true },
     ratings: { type: Number, required: false },
     category: { type: String, required: true },
-    average_time: { type: Number, required: true }
+    average_time: { type: Number, required: true },
+    image: { type: String, required: true },
 },
     {
         versionKey: false,
