@@ -56,6 +56,7 @@ app.post("/register", register);
 app.post("/login", login);
 
 // google auth routes
+
 app.get('/auth/google',
     passport.authenticate('google', {
         scope:
@@ -66,7 +67,7 @@ app.get('/auth/google',
 
 app.get('/auth/google/callback',
     passport.authenticate('google', {
-        successRedirect: '/auth/google/success',
+        successRedirect: '/home',
         failureRedirect: '/auth/google/failure'
     }));
 
