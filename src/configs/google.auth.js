@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require("uuid")
 passport.use(new GoogleStrategy({
     clientID:"640367966695-qmv112v1la92h7748o6v5bemdqsneuhm.apps.googleusercontent.com",
     clientSecret:"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",
-    callbackURL: "http://localhost:7000/auth/google/callback",
+    callbackURL: "https://grubhub-backend-clone.herokuapp.com/auth/google/callback",
     passReqToCallback: true
 },
     async function (request, accessToken, refreshToken, profile, done) {
