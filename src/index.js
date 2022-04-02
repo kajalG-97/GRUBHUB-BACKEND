@@ -69,7 +69,7 @@ app.get('/auth/google',
 
 app.get('/auth/google/callback',
     passport.authenticate('google', {
-        successRedirect: 'https://grubhub-backend-clone.herokuapp.com/home',
+        successRedirect: 'https://grubhub-clone-project.vercel.app/home',
         failureRedirect: '/auth/google/failure'
     }));
 
