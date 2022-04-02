@@ -39,7 +39,7 @@ app.use("/dish", dishController);
 
 app.use("/restaurant", resController);
 
-app.use("/location", resController);
+// app.use("/location", resController);
 
 app.use("/location", location_search);
 

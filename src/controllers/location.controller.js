@@ -18,4 +18,14 @@ router.get("/search", async (req, res) => {
     }
 });
 
+router.get("/:location", async (req, res) => {
+    try {
+        const restaurant = await Restaurant.find({ location: req.params.location }).lean().exec();
+        return res.send(restaurant);
+        // res.send(restaurant);
+    } catch (err) {
+        res.status(520).send(err.message);
+    }
+});
+
 module.exports = router;
